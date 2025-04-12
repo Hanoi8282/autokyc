@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOOL ĐA NĂNG AFFILIATE - AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TOOL ĐA NĂNG AI</h1>
+    <nav>
+      <button onclick="switchTab('facebook')">Facebook</button>
+      <button onclick="switchTab('aff')">Affiliate</button>
+      <button onclick="switchTab('video')">Video AI</button>
+      <button onclick="switchTab('kyc')">KYC / CCCD</button>
+      <button onclick="switchTab('nfc')">NFC</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="facebook" class="tab">
+      <h2>Tool Facebook</h2>
+      <textarea placeholder="Nhập UID hoặc link group..."></textarea>
+      <input type="text" placeholder="API Facebook nếu có">
+      <button onclick="autoFacebook()">Tự động kết bạn / vào nhóm</button>
+    </section>
+
+    <section id="aff" class="tab hidden">
+      <h2>Tool Affiliate</h2>
+      <input type="text" placeholder="Từ khóa tìm sản phẩm">
+      <button onclick="findTrendingProduct()">Tìm sản phẩm HOT</button>
+      <div id="productResult"></div>
+    </section>
+
+    <section id="video" class="tab hidden">
+      <h2>Tạo Video AI</h2>
+      <textarea placeholder="Nhập nội dung video..."></textarea>
+      <button onclick="generateVideo()">Tạo video</button>
+      <div id="videoResult"></div>
+    </section>
+
+    <section id="kyc" class="tab hidden">
+      <h2>Fake CCCD / BLX</h2>
+      <input type="text" placeholder="Họ tên">
+      <input type="text" placeholder="Số CCCD">
+      <input type="date" placeholder="Ngày sinh">
+      <input type="file" accept="image/*">
+      <button onclick="generateCCCD()">Tạo ảnh CCCD</button>
+      <div id="cccdResult"></div>
+    </section>
+
+    <section id="nfc" class="tab hidden">
+      <h2>Giả lập đọc NFC</h2>
+      <input type="text" placeholder="Tên thẻ / Mã thẻ">
+      <button onclick="simulateNFC()">Giả lập đọc NFC</button>
+      <div id="nfcOutput"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
